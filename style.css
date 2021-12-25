@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.control-button {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: #5252aacc;
+}
+
+.control-button span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: crimson;
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.info-container{
+    width: 1024px;
+    margin: 20px auto 0;
+    padding: 20px;
+    font-size: 24px;
+    background-color: #f6f6f6;
+    border: 2px solid red;
+    overflow: hidden;
+}
+
+.info-container .name {
+    float: left;
+    width: 50%;
+}
+
+.info-container .tries{
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+.memory-game-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1024px;
+    padding: 10px;
+    border: 2px solid red;
+    margin: 20px auto;
+    background-color: #1d89aa;
+}
+.no-click{
+    pointer-events: none;
+}
+.memory-game-container .block-elment{
+    width: 180px;
+    height: 180px;
+    margin: 10px 10px 10px;
+    transition: all 0.75s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    
+    
+}
+
+.memory-game-container .block-elment.flip{
+    transform: rotateY(180deg);
+}
+.memory-game-container .block-elment.hide{
+    visibility: hidden;
+}
+.memory-game-container .block-elment .face{
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    position: absolute;
+    text-align: center;
+    backface-visibility: hidden;
+}
+.memory-game-container .block-elment .front{
+    background-color: #333;
+}
+.memory-game-container .block-elment .front::before{
+    content: '?';
+    color: #fff;
+    font-size: 100px;
+    font-weight: bold;
+    
+}
+
+.memory-game-container .block-elment .back{
+    background-color: yellow;
+    transform: rotateY(180deg);
+}
+
+i {
+    color: red;
+    font-size: 100px;
+    width: 100%;
+    height: 100%;
+}
