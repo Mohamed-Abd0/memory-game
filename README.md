@@ -1,4 +1,4 @@
-# kasber site
+# Memory game
 this repo is application on javascript
 
 ## Table of Contents
